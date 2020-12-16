@@ -9,59 +9,72 @@
 </head>
 
 <body>
-    <!-- first and second -->
-    <div class="container">
-        <div class="rect"></div>
-        <div class="btns">
-            <button id="one">display: none </button>
-            <button id="two"> remove</button>
-            <button id="three">hidden</button>
-            <button id="forth">toggle</button>
-        </div>
-        <!-- third -->
+    <div class="wrapper">
+        <!-- first and second -->
         <div class="container">
-            <div class="sqrs">
-                <div class="sqr"></div>
-                <div class="sqr"></div>
-                <div class="sqr"></div>
-                <div class="sqr"></div>
-                <div class="sqr"></div>
+            <div class="rect"></div>
+            <div class="btns">
+                <button id="one">display: none </button>
+                <button id="two"> remove</button>
+                <button id="three">hidden</button>
+                <button id="forth">toggle</button>
             </div>
-            <button id="btn">BUTTON</button>
-        </div>
-        <!-- forth -->
-        <div class="container">
-            <p>
-                list of elements classes:
-            </p>
-            <ol>
-                <li>first-group</li>
-                <li>second-group</li>
-                <li>third-group</li>
-            </ol>
-            <p>don't forget use " . " (dot) for classes in input</p>
-            <div class="elements-container">
-                <div class="first-group item"></div>
-                <div class="second-group item"></div>
-                <div class="third-group item"></div>
-                <div class="first-group item"></div>
-                <div class="second-group item"></div>
-                <div class="third-group item"></div>
-                <div class="first-group item"></div>
-                <div class="second-group item"></div>
-                <div class="third-group item"></div>
+            <!-- third -->
+            <div class="container">
+                <div class="sqrs">
+                    <div class="sqr"></div>
+                    <div class="sqr"></div>
+                    <div class="sqr"></div>
+                    <div class="sqr"></div>
+                    <div class="sqr"></div>
+                </div>
+                <button id="btn">BUTTON</button>
+            </div>
+            <!-- forth -->
+            <div class="container">
+                <p>
+                    list of elements classes:
+                </p>
+                <ol>
+                    <li>first-group</li>
+                    <li>second-group</li>
+                    <li>third-group</li>
+                </ol>
+                <p>don't forget use " . " (dot) for classes in input</p>
+                <div class="elements-container">
+                    <div class="first-group item"></div>
+                    <div class="second-group item"></div>
+                    <div class="third-group item"></div>
+                    <div class="first-group item"></div>
+                    <div class="second-group item"></div>
+                    <div class="third-group item"></div>
+                    <div class="first-group item"></div>
+                    <div class="second-group item"></div>
+                    <div class="third-group item"></div>
+                </div>
+
+                <input type="text" name="selector" class="main-input input">
+                <button id="hide-btn">remove element</button>
+
+            </div>
+            <!-- fifth -->
+            <div class="container">
+                <div class="yellow-sqr"></div>
             </div>
 
-            <input type="text" name="selector" id="main-input">
-            <button id="hide-btn">remove element</button>
-
+            <!-- sixth -->
+            <div class="container">
+                <div class="red-square hidden"></div>
+                <button class="btn-for-red">HOVER</button>
+            </div>
+            <!-- seventh -->
+            <div class="container">
+                <input type="text" name="selector" class="focus-input input">
+                <div class="green-rect hidden"></div>
+            </div>
         </div>
-        <!-- fifth -->
-        <div class="container">
-            <div class="yellow-sqr"></div>
-       </div>
 
-       
+
         <script src="./script.js"></script>
 </body>
 

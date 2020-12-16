@@ -72,3 +72,28 @@ function remove() {
     yellowSqr.className = 'hidden';
 }
 
+// sixth
+
+const redSqr = document.querySelector('.red-square'),
+    btnForRed = document.querySelector('.btn-for-red');
+
+btnForRed.addEventListener('mouseover', () => {
+    redSqr.classList.toggle("hidden");
+})
+
+btnForRed.addEventListener('mouseout', () => {
+    redSqr.classList.toggle("hidden");
+})
+
+// seventh
+
+const focusInput = document.querySelector('.focus-input'),
+    greenRect = document.querySelector('.green-rect');
+
+focusInput.addEventListener('focus', () => {
+    greenRect.classList.remove('hidden');
+})
+
+focusInput.addEventListener('input', () => {
+    greenRect.classList.add('hidden'); 
+})
