@@ -43,7 +43,7 @@ button.addEventListener('click', () => {
 //forth
 
 const hideButton = document.getElementById('hide-btn'),
-    input = document.getElementById('main-input');
+    input = document.querySelector('.main-input');
 
 
 
