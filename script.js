@@ -14,23 +14,19 @@ buttons.forEach(i => {
         } else if (event.target.id == "two") {
 
             rectangle.remove();
-
         } else if (event.target.id == "three") {
 
             rectangle.className = "hidden";
-
         }
 
         else if (event.target.id == "forth") {
 
             rectangle.classList.toggle("hidden");
-
         }
     })
 });
 
 // third
-
 const button = document.getElementById('btn'),
     rectangles = document.querySelectorAll('.sqr');
 
@@ -41,7 +37,6 @@ button.addEventListener('click', () => {
 })
 
 //forth
-
 const hideButton = document.getElementById('hide-btn'),
     input = document.querySelector('.main-input');
 
@@ -55,7 +50,6 @@ hideButton.addEventListener('click', () => {
 })
 
 //fifth
-
 const yellowSqr = document.querySelector('.yellow-sqr');
 
 yellowSqr.addEventListener('click', hello);
@@ -71,7 +65,6 @@ function remove() {
 }
 
 // sixth
-
 const redSqr = document.querySelector('.red-square'),
     btnForRed = document.querySelector('.btn-for-red');
 
@@ -84,7 +77,6 @@ btnForRed.addEventListener('mouseout', () => {
 })
 
 // seventh
-
 const focusInput = document.querySelector('.focus-input'),
     greenRect = document.querySelector('.green-rect');
 
@@ -93,22 +85,44 @@ focusInput.addEventListener('focus', () => {
 })
 
 focusInput.addEventListener('input', () => {
-    greenRect.classList.add('hidden'); 
+    greenRect.classList.add('hidden');
 })
 
 // eighth
-
 const imgInput = document.querySelector('.img-input'),
-     imgBtn = document.querySelector('.img-btn'),
+    imgBtn = document.querySelector('.img-btn'),
     imgContainer = document.querySelector('.img-container');
-   
+
 imgBtn.addEventListener('click', () => {
     const imgUrl = imgInput.value,
         img = document.createElement('img');
-    
+
     img.setAttribute('src', imgUrl);
     imgContainer.append(img);
 
+})
+
+// ninth
+const imgsText = document.querySelector('#imgs-text'),
+    imgsBtn = document.querySelector('.imgs-btn'),
+    imgsContainer = document.querySelector('.imgs-container');
+
+imgsBtn.addEventListener('click', () => {
+    let urls = imgsText.value.split('\n');
+
+    urls.forEach(url => {
+        const img = document.createElement('img');
+        img.setAttribute('src', url);
+        imgsContainer.append(img);
     })
 
-imgInput
+    //tenth
+
+
+
+
+})
+
+
+
+
