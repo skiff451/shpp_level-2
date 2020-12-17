@@ -100,6 +100,15 @@ ol {
     background-color: greenyellow;
 }
 
-.imgs-input {
-    /* opacity: 0; */
+.coordinates{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    min-width: 200px;
+    min-height: 30px;
+    position: fixed;
+    background-color: rgba(216, 174, 174, 0.582);
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
 }

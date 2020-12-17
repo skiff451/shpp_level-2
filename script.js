@@ -116,13 +116,19 @@ imgsBtn.addEventListener('click', () => {
         imgsContainer.append(img);
     })
 
-    //tenth
-
-
-
-
 })
 
 
+//tenth
 
+const body = document.querySelector("body"),
+    // coordinates = document.querySelector(".coordinates"),
+    coordX = document.querySelector(".x-coordinate"),
+    coordY = document.querySelector(".y-coordinate");
+
+    body.addEventListener('mousemove', (event) => {
+        console.log(event);
+        coordX.textContent = `Х:${event.pageX}`;
+        coordY.textContent = `Y:${event.pageY}`;
+    })
 
