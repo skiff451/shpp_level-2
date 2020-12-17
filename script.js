@@ -45,8 +45,6 @@ button.addEventListener('click', () => {
 const hideButton = document.getElementById('hide-btn'),
     input = document.querySelector('.main-input');
 
-
-
 hideButton.addEventListener('click', () => {
     const inputValue = input.value,
         elements = document.querySelectorAll(inputValue);
@@ -97,3 +95,20 @@ focusInput.addEventListener('focus', () => {
 focusInput.addEventListener('input', () => {
     greenRect.classList.add('hidden'); 
 })
+
+// eighth
+
+const imgInput = document.querySelector('.img-input'),
+     imgBtn = document.querySelector('.img-btn'),
+    imgContainer = document.querySelector('.img-container');
+   
+imgBtn.addEventListener('click', () => {
+    const imgUrl = imgInput.value,
+        img = document.createElement('img');
+    
+    img.setAttribute('src', imgUrl);
+    imgContainer.append(img);
+
+    })
+
+imgInput
