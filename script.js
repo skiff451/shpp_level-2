@@ -134,3 +134,19 @@ doc.addEventListener('mousemove', (event) => {
 // eleventh
 lang.textContent = window.navigator.language;
 
+// twelfth
+const latitude = document.querySelector('.latitude'),
+    longitude = document.querySelector('.longitude');
+
+
+function success(pos) {
+    console.log(pos);
+    let crd = pos.coords;
+    latitude.textContent = `Ш:${crd.latitude}`;
+    longitude.textContent = `Д:${crd.longitude}`;
+    
+};
+
+window.navigator.geolocation.getCurrentPosition(success);
+
+
