@@ -121,14 +121,16 @@ imgsBtn.addEventListener('click', () => {
 
 //tenth
 
-const body = document.querySelector("body"),
-    // coordinates = document.querySelector(".coordinates"),
+const doc = document.querySelector("html"),
+    lang = document.querySelector(".lang"),
     coordX = document.querySelector(".x-coordinate"),
     coordY = document.querySelector(".y-coordinate");
 
-    body.addEventListener('mousemove', (event) => {
-        console.log(event);
-        coordX.textContent = `Х:${event.pageX}`;
-        coordY.textContent = `Y:${event.pageY}`;
-    })
+doc.addEventListener('mousemove', (event) => {
+    coordX.textContent = `Х:${event.pageX}`;
+    coordY.textContent = `Y:${event.pageY}`;
+})
+
+// eleventh
+lang.textContent = window.navigator.language;
 
