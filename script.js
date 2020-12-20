@@ -140,13 +140,51 @@ const latitude = document.querySelector('.latitude'),
 
 
 function success(pos) {
-    console.log(pos);
     let crd = pos.coords;
     latitude.textContent = `Ш:${crd.latitude}`;
     longitude.textContent = `Д:${crd.longitude}`;
-    
 };
-
 window.navigator.geolocation.getCurrentPosition(success);
+
+
+//thirteenth
+
+const textBlocks = document.querySelectorAll('.block-item'),
+    textWrapper = document.querySelector('.text-block-wrapper');
+
+const myLocalStorage = window.localStorage,
+ mySessionStorage = window.sessionStorage;
+
+
+textBlocks.forEach(item => {
+    if (item.classList.contains('local-storage')) {
+        item.textContent = myLocalStorage.getItem('local-storage');
+    } else if (item.classList.contains('cookies')) {
+         item.textContent = document.cookie.split('=')[1];
+    } else if (item.classList.contains('session-storage')) {
+        item.textContent = mySessionStorage.getItem('session-storage');
+    }
+
+})
+
+textWrapper.addEventListener('input', (event) => {
+    let element = event.target;
+   
+    if (element.classList.contains('local-storage')) {
+        myLocalStorage.setItem('local-storage', element.textContent);
+    } else if (element.classList.contains('cookies')) {
+        document.cookie = `cookies=${element.textContent}`;
+    } else if (element.classList.contains('session-storage')) {
+        mySessionStorage.setItem('session-storage', element.textContent);
+    }
+
+
+});
+
+
+
+
+
+
 
 
