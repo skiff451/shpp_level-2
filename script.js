@@ -5,7 +5,7 @@ const buttons = document.querySelectorAll("button"),
     rectangle = document.querySelector('.rect');
 buttons.forEach(i => {
     i.addEventListener('click', event => {
-        console.log(event.target.id);
+
 
         if (event.target.id == "one") {
 
@@ -153,14 +153,14 @@ const textBlocks = document.querySelectorAll('.block-item'),
     textWrapper = document.querySelector('.text-block-wrapper');
 
 const myLocalStorage = window.localStorage,
- mySessionStorage = window.sessionStorage;
+    mySessionStorage = window.sessionStorage;
 
 
 textBlocks.forEach(item => {
     if (item.classList.contains('local-storage')) {
         item.textContent = myLocalStorage.getItem('local-storage');
     } else if (item.classList.contains('cookies')) {
-         item.textContent = document.cookie.split('=')[1];
+        item.textContent = document.cookie.split('=')[1];
     } else if (item.classList.contains('session-storage')) {
         item.textContent = mySessionStorage.getItem('session-storage');
     }
@@ -169,7 +169,7 @@ textBlocks.forEach(item => {
 
 textWrapper.addEventListener('input', (event) => {
     let element = event.target;
-   
+
     if (element.classList.contains('local-storage')) {
         myLocalStorage.setItem('local-storage', element.textContent);
     } else if (element.classList.contains('cookies')) {
@@ -177,9 +177,42 @@ textWrapper.addEventListener('input', (event) => {
     } else if (element.classList.contains('session-storage')) {
         mySessionStorage.setItem('session-storage', element.textContent);
     }
-
-
 });
+
+// fourteenth
+
+const upButton = document.querySelector('.up-button');
+
+window.addEventListener('scroll', () => {
+    let clientHeight = document.documentElement.clientHeight,
+        scrollTop = document.documentElement.scrollTop,
+        scrollHeight = document.documentElement.scrollHeight;
+
+    // console.log(clientHeight + scrollTop);
+    // console.log(scrollHeight);
+
+    if ((clientHeight + scrollTop) >= scrollHeight) {
+        upButton.classList.add('visible');
+        upButton.classList.remove('hidden');
+    } else {
+        upButton.classList.add('hidden');
+        upButton.classList.remove('visible');
+    }
+});
+
+upButton.addEventListener('click', () => {
+    const myInterval = setInterval(scrolling, 10);
+
+    function scrolling() {
+        window.scrollBy(0, -10);
+
+        if (document.documentElement.scrollTop <= 0) {
+            clearInterval(myInterval);
+            console.log("ALARM")
+        }
+    }
+});
+
 
 
 

@@ -39,6 +39,7 @@
 
 .hidden {
     opacity: 0;
+    transition: opacity 1s;
 }
 
 .sqrs {
@@ -142,4 +143,9 @@ ol {
     height: 30px;
     background-color: rgba(0, 0, 255, 0.199);
     margin: 10px;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 1s;
 }
