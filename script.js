@@ -251,6 +251,11 @@ modalWindow.addEventListener('click', () => {
 });
 
 
+// seventeenth
 
+const submit = document.querySelector('input[type="submit"]');
+submit.addEventListener('click', (event) => {
+    event.preventDefault();
+});
 
 
