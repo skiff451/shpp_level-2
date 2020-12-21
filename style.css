@@ -155,7 +155,7 @@ ol {
     height: 200px;
     background-color: rgba(137, 43, 226, 0.486);
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
 }
 
@@ -163,4 +163,16 @@ ol {
     width: 100px;
     height: 100px;
     background-color: rgba(43, 226, 226, 0.486)
+}
+
+.modal-window {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    background-color: grey;
+    z-index: 10;
+    position: fixed;
 }

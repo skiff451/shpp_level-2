@@ -219,16 +219,36 @@ const firstBlock = document.querySelector('.first-block'),
 firstBlock.addEventListener('click', (event) => {
     if (event.target.classList.contains('first-block')) {
         alert('first-block');
-    }    
+    }
 });
 
 secondBlock.addEventListener('click', () => {
     alert('second-block');
 });
 
+//sixteenth
 
+const modalButton = document.querySelector('.modal-button'),
+    contentWrapper = document.querySelector('.wrapper'),
+    modalWindow = document.createElement('div');
 
+modalButton.addEventListener('click', () => {
 
+    if (!document.querySelector('.modal-window')) {
+        modalWindow.classList.add('modal-window');
+        contentWrapper.append(modalWindow);
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "hidden";
+        modalWindow.style.display = '';
+    }
+});
+
+modalWindow.addEventListener('click', () => {
+    console.log('out');
+    document.body.style.overflow = "";
+        modalWindow.style.display = 'none';
+});
 
 
 
