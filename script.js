@@ -188,9 +188,6 @@ window.addEventListener('scroll', () => {
         scrollTop = document.documentElement.scrollTop,
         scrollHeight = document.documentElement.scrollHeight;
 
-    // console.log(clientHeight + scrollTop);
-    // console.log(scrollHeight);
-
     if ((clientHeight + scrollTop) >= scrollHeight) {
         upButton.classList.add('visible');
         upButton.classList.remove('hidden');
@@ -211,6 +208,22 @@ upButton.addEventListener('click', () => {
             console.log("ALARM")
         }
     }
+});
+
+//fifteenth
+
+const firstBlock = document.querySelector('.first-block'),
+    secondBlock = document.querySelector('.second-block');
+
+
+firstBlock.addEventListener('click', (event) => {
+    if (event.target.classList.contains('first-block')) {
+        alert('first-block');
+    }    
+});
+
+secondBlock.addEventListener('click', () => {
+    alert('second-block');
 });
 
 

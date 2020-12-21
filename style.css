@@ -149,3 +149,18 @@ ol {
     opacity: 1;
     transition: opacity 1s;
 }
+
+.first-block {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(137, 43, 226, 0.486);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.second-block {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(43, 226, 226, 0.486)
+}
