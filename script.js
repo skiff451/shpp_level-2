@@ -3,9 +3,9 @@
 // first and second
 const buttons = document.querySelectorAll("button"),
     rectangle = document.querySelector('.rect');
+
 buttons.forEach(i => {
     i.addEventListener('click', event => {
-
 
         if (event.target.id == "one") {
 
@@ -205,7 +205,6 @@ upButton.addEventListener('click', () => {
 
         if (document.documentElement.scrollTop <= 0) {
             clearInterval(myInterval);
-            console.log("ALARM")
         }
     }
 });
@@ -245,9 +244,8 @@ modalButton.addEventListener('click', () => {
 });
 
 modalWindow.addEventListener('click', () => {
-    console.log('out');
     document.body.style.overflow = "";
-        modalWindow.style.display = 'none';
+    modalWindow.style.display = 'none';
 });
 
 
@@ -258,4 +256,39 @@ submit.addEventListener('click', (event) => {
     event.preventDefault();
 });
 
+//eighteens
 
+const fileInput = document.querySelector('input[type="file"]'),
+    fileWrapper = document.querySelector('.file-wrapper'),
+    fileButton = document.querySelector('.file-button'),
+    fileName = document.querySelector('.file-name');
+
+
+fileInput.addEventListener('dragenter', () => {
+    fileWrapper.classList.add('green');
+});
+
+
+fileInput.addEventListener('dragleave', () => {
+    fileWrapper.classList.remove('green');
+});
+
+fileInput.addEventListener('drop', (event) => {
+    setTimeout(() => {
+        let nFile = giveNameFile(event.target.value);
+        fileName.textContent = fileName.textContent + ` ${nFile}`;
+    }, 5);
+
+    if (fileName.textContent.length > 10) {
+
+    }
+});
+
+function giveNameFile(filePath) {
+    const index = filePath.lastIndexOf('\\');
+    return filePath.slice(index + 1, filePath.length);
+}
+
+function shortenFileName() {
+    
+}
