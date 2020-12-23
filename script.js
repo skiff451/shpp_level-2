@@ -261,7 +261,8 @@ submit.addEventListener('click', (event) => {
 const fileInput = document.querySelector('input[type="file"]'),
     fileWrapper = document.querySelector('.file-wrapper'),
     fileButton = document.querySelector('.file-button'),
-    fileName = document.querySelector('.file-name');
+    fileName = document.querySelector('.file-name'),
+    labelWrapper = document.querySelector('.label-wrapper');
 
 
 fileInput.addEventListener('dragenter', () => {
@@ -276,19 +277,37 @@ fileInput.addEventListener('dragleave', () => {
 fileInput.addEventListener('drop', (event) => {
     setTimeout(() => {
         let nFile = giveNameFile(event.target.value);
-        fileName.textContent = fileName.textContent + ` ${nFile}`;
+        fileName.textContent = ` ${nFile}`;
     }, 5);
 
     if (fileName.textContent.length > 10) {
-
+        fileName.textContent = shortenFileName(fileName.textContent);
     }
+
+    buttonJumpUp();
+
+    setTimeout(() => {
+        buttonJumpDown();
+        fileWrapper.classList.remove('green');
+    }, 1000);
+    labelWrapper.classList.remove('jump-down');
 });
+
+function buttonJumpUp() {
+    labelWrapper.classList.add('jump-up');
+    fileButton.classList.add('blue');
+}
+function buttonJumpDown() {
+    labelWrapper.classList.remove('jump-up');
+    fileButton.classList.remove('blue');
+    labelWrapper.classList.add('jump-down');
+}
 
 function giveNameFile(filePath) {
     const index = filePath.lastIndexOf('\\');
     return filePath.slice(index + 1, filePath.length);
 }
 
-function shortenFileName() {
-    
+function shortenFileName(fileName) {
+    return `${fileName.slice(0, 10)}...`;
 }

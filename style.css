@@ -186,7 +186,7 @@ input[type="file"] {
     height: 50px;
     z-index: 1000;
     overflow: hidden;
-    top:16px
+    top: 16px
 }
 
 .file-wrapper {
@@ -214,7 +214,7 @@ input[type="file"] {
 .button-text {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(74, 83, 254);
-    
+
 }
 
 .file-button {
@@ -226,6 +226,21 @@ input[type="file"] {
     justify-content: space-around;
     align-items: center;
     border-radius: 7px;
+}
+
+.jump-up {
+    position: absolute;
+    top: 0;
+}
+
+.blue {
+    background-color: rgba(0, 255, 21, 0.438);
+    transition: background-color 2s;
+}
+
+.jump-down {
+    position: static;
+    transition: position 1s;
 }
 
 .file-button:hover {
